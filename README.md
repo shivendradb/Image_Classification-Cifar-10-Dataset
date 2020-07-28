@@ -14,9 +14,6 @@ Downloading may take a minute. We load in the training and test data, split the 
 Augmentation
 In this cell, we perform some simple data augmentation by randomly flipping and rotating the given image data. We do this by defining a torchvision transform, and you can learn about all the transforms that are used to pre-process and augment data, here.
 
-TODO: Look at the transformation documentation; add more augmentation transforms, and see how your model performs.
-This type of data augmentation should add some positional variety to these images, so that when we train a model on this data, it will be robust in the face of geometric changes (i.e. it will recognize a ship, no matter which direction it is facing). It's recommended that you choose one or two transforms.
-
 View an Image in More Detail
 Here, we look at the normalized red, green, and blue (RGB) color channels as three separate, grayscale intensity images.
 
@@ -28,12 +25,8 @@ Maxpooling layers, which reduce the x-y size of an input, keeping only the most 
 The usual Linear + Dropout layers to avoid overfitting and produce a 10-dim output.
 A network with 2 convolutional layers is shown in the image below and in the code, and you've been given starter code with one convolutional and one maxpooling layer.
 
-<img src='notebook_ims/2_layer_conv.png' height=50% width=50% />
-
 TODO: Define a model with multiple convolutional layers, and define the feedforward metwork behavior.
 The more convolutional layers you include, the more complex patterns in color and shape a model can detect. It's suggested that your final model include 2 or 3 convolutional layers as well as linear layers + dropout in between to avoid overfitting.
-
-It's good practice to look at existing research and implementations of related models as a starting point for defining your own models. You may find it useful to look at this PyTorch classification example or this, more complex Keras example to help decide on a final structure.
 
 Output volume for a convolutional layer
 To compute the output size of a given convolutional layer we can perform the following calculation (taken from Stanford's cs231n course):
